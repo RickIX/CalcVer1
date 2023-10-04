@@ -14,23 +14,29 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
+        // Encontre o elemento Switch na interface do usuário
         val switchDarkMode = findViewById<Switch>(R.id.switchDarkMode)
 
-        // Defina o estado inicial com base nas preferências do aplicativo
+        // Defina o estado inicial do Switch com base nas preferências de modo noturno do aplicativo
         switchDarkMode.isChecked = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
 
-        // Configure o ouvinte para alternar entre os modos claro e escuro
+        // Configure um ouvinte de alterações para o Switch, para alternar entre os modos claro e escuro
         switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
+                // Ative o Modo Escuro do aplicativo
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                // Exiba uma mensagem de feedback curta
                 showToast("Modo Escuro ativado")
             } else {
+                // Desative o Modo Escuro do aplicativo
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                // Exiba uma mensagem de feedback curto
                 showToast("Modo Claro ativado")
             }
         }
     }
 
+    // Método para exibir uma mensagem de feedback curta
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
