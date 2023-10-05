@@ -198,13 +198,8 @@ class MainActivity : AppCompatActivity() {
     // Método para subtrair do valor na memória
     fun subtractFromMemory(view: View) {
         val espacoDigitos = findViewById<TextView>(R.id.espacoDigitos)
+                memoryValue = 0.0
 
-        // Verifica se o texto atual no TextView de trabalho é um número válido
-        val currentText = espacoDigitos.text.toString()
-        if (currentText.isNotEmpty()) {
-            val currentValue = currentText.toDouble()
-            memoryValue -= currentValue
-        }
     }
 
     // Método para recuperar o valor da memória
