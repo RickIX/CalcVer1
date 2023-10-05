@@ -1,9 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Calculadora</string>
-    <string name="modo_escuro">Modo Escuro</string>
-    <string name="modo_claro">Modo Claro</string>
-    <string name="modo_escuro_ativado">Modo Claro Ativado</string>
-    <string name="modo_claro_ativado">Modo Escuro Ativado</string>
     <string name="guardarNaMemoria">M+</string>
     <string name="removerDaMemoria">M-</string>
     <string name="resetarMemoria">MR</string>
@@ -21,8 +18,12 @@
     <string name="zero">0</string>
     <string name="multiplicacao">X</string>
     <string name="divisao">÷</string>
-    <string name="subtracao">-</string>
     <string name="adicao">+</string>
     <string name="decimal">.</string>
     <string name="igual">=</string>
+    <string name="subtracao">-</string>
+    <string name="modo_escuro">Dark Mode</string>
+    <string name="modo_claro">Light Mode</string>
+    <string name="modo_claro_ativado">Ligh Mode ON</string>
+    <string name="modo_escuro_ativado">Dark Mode ON</string>
 </resources>

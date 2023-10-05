@@ -26,20 +26,29 @@ class MainActivity : AppCompatActivity() {
 
     // Método chamado quando um botão de número é pressionado
     fun numberAction(view: View) {
+        // Obtém uma referência para o TextView com o ID "espacoDigitos" na interface do usuário
         val espacoDigitos = findViewById<TextView>(R.id.espacoDigitos)
 
+        // Verifica se o parâmetro "view" é uma instância de Button
         if (view is Button) {
+            // Verifica se o texto do botão é um ponto (.)
             if (view.text == ".") {
+                // Se a variável "decimal" for verdadeira (true), então...
                 if (decimal)
+                // Anexa o texto do botão (neste caso, um ponto) ao conteúdo do TextView "espacoDigitos"
                     espacoDigitos.append(view.text)
 
+                // Define a variável "decimal" como false para impedir a adição de mais pontos
                 decimal = false
             } else
+            // Se o texto do botão não for um ponto, anexa o texto do botão ao TextView "espacoDigitos"
                 espacoDigitos.append(view.text)
 
+            // Define a variável "operacao" como true, indicando que uma operação (número ou operador) foi adicionada
             operacao = true
         }
     }
+
 
     // Método chamado quando um botão de operação é pressionado
     fun operationAction(view: View) {

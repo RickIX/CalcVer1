@@ -26,12 +26,13 @@ class SettingsActivity : AppCompatActivity() {
                 // Ative o Modo Escuro do aplicativo
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 // Exiba uma mensagem de feedback curta
-                showToast("Modo Escuro ativado")
+                showToast(getString(R.string.modo_escuro_ativado))
+
             } else {
                 // Desative o Modo Escuro do aplicativo
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 // Exiba uma mensagem de feedback curto
-                showToast("Modo Claro ativado")
+                showToast(getString(R.string.modo_claro_ativado))
             }
         }
     }
