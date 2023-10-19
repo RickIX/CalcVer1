@@ -7,11 +7,16 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.FirebaseApp
+//import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        FirebaseApp.initializeApp(this)
+//        val crashlytics = FirebaseCrashlytics.getInstance()
+//        crashlytics.setCrashlyticsCollectionEnabled(true)
 
         val btnSettings = findViewById<Button>(R.id.btnSettings)
         btnSettings.setOnClickListener {
